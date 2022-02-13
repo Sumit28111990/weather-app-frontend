@@ -1,3 +1,11 @@
 .container {
     display:flex;
 }
+
+.weather_data {
+    padding-left: 5%;
+}
+
+span {
+    padding-right: 5%;
+}
