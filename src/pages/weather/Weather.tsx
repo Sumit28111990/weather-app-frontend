@@ -11,7 +11,6 @@ import './Weather.css';
 
 function debounce<T>(this: T, func: Function, timeout = 500) {
     let timer: any;
-    console.log('vruhh?', this, func);
     return (...args: T[]) => {
         clearTimeout(timer);
         timer = setTimeout(() => { func.apply(this, args); }, timeout);
@@ -38,7 +37,7 @@ const Weather = ({ lat, lon }: { lat: string, lon: string }) => {
     return (<>
         {weather?.main &&
             <div>
-                <h2>Country: {weather.name}</h2>
+                <h2>Location: {weather.name}</h2>
                 <div className="container">
                     <span>Clouds: {weather.clouds.all}</span>
                     <span>Timezone: {weather.timezone}</span>
