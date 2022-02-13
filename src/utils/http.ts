@@ -1,4 +1,4 @@
-import { Convert } from "./types";
+import { WeatherData } from "./types";
 
 
 export default class Http {
@@ -20,10 +20,10 @@ export default class Http {
         })).text()
     }
 
-    static async get_weather(lat: string, lon: string) {
+    static async get_weather(lat: string, lon: string): Promise<WeatherData> {
 
         const url = this.WEATHER_API_URL.replace('{1}', lat).replace('{2}', lon);
-        return Convert.toWeatherData(await (await fetch(url)).text());
+        return await (await fetch(url)).json();
     }
 
 }
