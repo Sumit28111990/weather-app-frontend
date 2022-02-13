@@ -1,5 +1,5 @@
 import React, { useState, ChangeEvent } from "react"
-
+import './Image.css';
 const Image = () => {
 
     const [imageUrl, setImageUrl] = useState('');
