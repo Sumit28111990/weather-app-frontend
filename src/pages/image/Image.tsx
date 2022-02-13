@@ -28,7 +28,7 @@ const Image = () => {
                 </div>
                 <div>
                     <div>
-                        <a href={shortUrl}>Image URL</a>
+                        <a target={"_blank"} href={shortUrl}>{shortUrl}</a>
                     </div>
                     <div>
                         <input type="file" onChange={uploadImage} />
