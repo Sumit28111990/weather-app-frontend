@@ -27,10 +27,12 @@ const Image = () => {
                     <img src={imageUrl} alt='Selected Image'></img>
                 </div>
                 <div>
-                    <a href={shortUrl}>Image URL</a>
-                </div>
-                <div>
-                    <input type="file" onChange={uploadImage} />
+                    <div>
+                        <a href={shortUrl}>Image URL</a>
+                    </div>
+                    <div>
+                        <input type="file" onChange={uploadImage} />
+                    </div>
                 </div>
             </div>
         </div>
