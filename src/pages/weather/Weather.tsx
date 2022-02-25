@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from "react";
 
-import ReactMarkdown from 'react-markdown';
+import ReactMarkdown from 'react-markdown'
 
 import rehypeRaw from 'rehype-raw'
-
 
 import { WeatherData } from "../../utils/types";
 import Http from "../../utils/http";
 
 import './Weather.css';
-
 
 declare global {
     namespace JSX {
@@ -18,6 +16,7 @@ declare global {
             'weather': { 'lat': string, 'lon': string }
         }
     }
+}
 
 function debounce<T>(this: T, func: Function, timeout = 500) {
     let timer: any;
@@ -76,7 +75,7 @@ const WeatherPage = () => {
 
             </textarea>
             <div className="weather_data">
-             <ReactMarkdown children={markdown} rehypePlugins={[rehypeRaw]} components={{ weather: ({ lat, lon }) => <Weather lat={lat} lon={lon} /> }} />
+                <ReactMarkdown children={markdown} rehypePlugins={[rehypeRaw]} components={{ weather: ({ lat, lon }: {lat: string,lon: string}) => <Weather lat={lat} lon={lon} /> }} />
             </div>
         </div>
     </>)
