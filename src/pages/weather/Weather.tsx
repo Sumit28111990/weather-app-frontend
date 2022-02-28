@@ -18,7 +18,7 @@ declare global {
     }
 }
 
-function debounce<T>(this: T, func: Function, timeout = 500) {
+function debounce<T>(this: T, func: Function, timeout = 120) {
     let timer: any;
     return (...args: T[]) => {
         clearTimeout(timer);
