@@ -67,7 +67,7 @@ const WeatherPage = () => {
 
         setMarkDown(value);
     }
-    const processChange = debounce((e: any) => onChange(e));
+    const processChange = debounce((e: any) => onChange(e),65);
 
     return (<>
         <div className="container">
